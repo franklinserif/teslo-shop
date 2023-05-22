@@ -26,17 +26,17 @@ export const Navbar = () => {
 
         <Box sx={{ display: { xs: "none", sm: "block" } }}>
           <NextLink href="/category/men" style={{ textDecoration: "none" }}>
-            <Link component="span">
+            <Link component={"span"}>
               <Button>Men</Button>
             </Link>
           </NextLink>
           <NextLink href="/category/women" style={{ textDecoration: "none" }}>
-            <Link component="span">
+            <Link component={"span"}>
               <Button>Women</Button>
             </Link>
           </NextLink>
           <NextLink href="/category/kid" style={{ textDecoration: "none" }}>
-            <Link component="span">
+            <Link component={"span"}>
               <Button>Kid</Button>
             </Link>
           </NextLink>
@@ -48,7 +48,7 @@ export const Navbar = () => {
           <SearchOutlined />
         </IconButton>
         <NextLink href="/cart">
-          <Link>
+          <Link component={"span"}>
             <IconButton>
               <Badge badgeContent={2} color="secondary">
                 <ShoppingCartOutlined />
