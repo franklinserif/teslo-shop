@@ -1,16 +1,16 @@
 import { FC } from "react";
 import Head from "next/head";
-import { Navbar } from "../ui";
+import { Navbar, SideMenu } from "../ui";
 
 interface Props {
   title: string;
   pageDescription: string;
-  imageFullUrl: string;
   children: React.ReactNode;
+  imageFullUrl?: string;
 }
 
 export const ShopLayout: FC<Props> = (props) => {
-  const { title, pageDescription, imageFullUrl, children } = props;
+  const { title, pageDescription, children, imageFullUrl } = props;
 
   return (
     <>
@@ -23,7 +23,7 @@ export const ShopLayout: FC<Props> = (props) => {
       </Head>
       <Navbar />
 
-      {/** TODO: sidebar */}
+      <SideMenu />
 
       <main
         style={{ margin: "80px auto", maxWidth: "1440px", padding: "0 30px" }}
