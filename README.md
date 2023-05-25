@@ -5,6 +5,7 @@ Teslo-Shop is an e-commerce platform inspired by the Tesla website. It allows us
 ## Prerequisites
 
 - Node.js v16
+- Docker
 
 ## Table of Contents
 
@@ -34,25 +35,49 @@ To get started with Teslo-Shop, follow these steps:
    git clone https://github.com/franklinserif/teslo-shop.git
    ```
 
-3. Change directory into the project folder:
+3. Change enviroment variables:
+   rename .env.example to .env
+
+   for production:
+   and paste the url mongo connection to MONGO_URL
+
+   ```bash
+   MONGO_URL=mongodb:<your mongo db connection>
+   ```
+
+   for local development use
+
+   ```bash
+   MONGO_URL=mongodb://localhost:27017/teslodb
+   ```
+
+   only for development:
+
+   ```bash
+   docker-compose up -d
+   ```
+
+   this will setup the local database in your docker container
+
+4. Change directory into the project folder:
 
    ```bash
    cd teslo-shop
    ```
 
-4. Install dependencies using npm or yarn:
+5. Install dependencies using npm or yarn:
 
    ```bash
    yarn install
    ```
 
-5. Set up environment variables for your MongoDB instance in .env.local file:
+6. Set up environment variables for your MongoDB instance in .env.local file:
 
    ```bash
-   MONGODB_URI=your_mongodb_connection_string_here>
+   MONGODB_URI=<your_mongodb_connection_string_here>
    ```
 
-6. Start development server:
+7. Start development server:
 
    ```bash
        yarn dev
