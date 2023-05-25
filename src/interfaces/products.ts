@@ -10,7 +10,16 @@ export interface IProduct {
   title: string;
   type: TType;
   gender: "men" | "women" | "kid" | "unisex";
+  createdAt: string;
+  updatedAt: string;
 }
 
 export type TSize = "XS" | "S" | "M" | "L" | "XL" | "XXL" | "XXXL";
 export type TType = "shirts" | "pants" | "hoodies" | "hats";
+
+export type TProductsData =
+  | {
+      message: string;
+    }
+  | IProduct[]
+  | IProduct;
